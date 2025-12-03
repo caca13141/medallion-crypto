@@ -1,13 +1,21 @@
-hyperliquid-python-sdk>=0.21.0
-pandas>=2.1.4
-numpy>=1.26.3
-python-dotenv>=1.0.0
-eth-account>=0.10.0
-requests>=2.31.0
-torch
+hyperliquid-python-sdk
+pandas>=2.0.0
+numpy>=1.24.0
+python-dotenv
+torch>=2.0.0
 kmapper
-scikit-learn
-stable-baselines3
-gymnasium
-streamlit
-plotly
+scikit-learn>=1.3.0
+stable-baselines3>=2.0.0
+gymnasium>=0.28.0
+streamlit>=1.28.0
+plotly>=5.17.0
+
+# Topology
+gudhi>=3.9.0
+ripser>=0.6.4
+persim>=0.3.0
+scipy>=1.11.0
+
+# Advanced ML
+torchvision>=0.15.0
+einops>=0.7.0
