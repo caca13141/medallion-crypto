@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Data & Logs
+engine.log
+src/data/*.json
+src/data/*.pth
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,13 @@
+hyperliquid-python-sdk>=0.21.0
+pandas>=2.1.4
+numpy>=1.26.3
+python-dotenv>=1.0.0
+eth-account>=0.10.0
+requests>=2.31.0
+torch
+kmapper
+scikit-learn
+stable-baselines3
+gymnasium
+streamlit
+plotly
