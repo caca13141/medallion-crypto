@@ -1,0 +1,8 @@
+{
+  "model": "xgboost",
+  "test_accuracy": 0.654639175257732,
+  "all_models": {
+    "xgboost": 0.654639175257732,
+    "gradientboost": 0.6298969072164948
+  }
+}
