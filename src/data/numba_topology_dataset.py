@@ -93,10 +93,11 @@ class NumbaTopologyDataset:
         df = pd.read_parquet(parquet_path)
         
         # Convert to numpy for Numba
-        prices = df['c'].values
-        highs = df['h'].values
-        lows = df['l'].values
-        volumes = df['v'].values
+        # Handle both formats (Hyperliquid: c/h/l/v, Binance: close/high/low/volume)
+        prices = df.get('close', df.get('c')).values
+        highs = df.get('high', df.get('h')).values
+        lows = df.get('low', df.get('l')).values
+        volumes = df.get('volume', df.get('v')).values
         
         features_list = []
         labels_list = []
