@@ -8,7 +8,6 @@ __pycache__/
 # Data & Logs
 engine.log
 src/data/*.json
-src/data/*.pth
 *.tmp
 
 # IDE
@@ -33,8 +32,4 @@ yarn-error.log*
 # OS
 .DS_Store
 
-# Models - Large files
-*.pt
-*.pth
-*.zip
-*.pkl
+
