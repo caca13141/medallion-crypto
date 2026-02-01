@@ -74,7 +74,7 @@ def test_topology_integrator():
     assert result_trend['tti'] >= 0, "TTI should be non-negative"
     assert result_trend['persistence_image_h0'].shape == (20, 20), "H0 image wrong shape"
     
-    print("✅ Topology Integrator PASSED")
+    print(" Topology Integrator PASSED")
 
 def test_transformer_architecture():
     """Test TopologicalTransformer architecture"""
@@ -109,7 +109,7 @@ def test_transformer_architecture():
     assert torch.all((strength >= 0) & (strength <= 1)), "Strength not in [0,1]"
     assert torch.all((confidence >= 0) & (confidence <= 1)), "Confidence not in [0,1]"
     
-    print("✅ Transformer Architecture PASSED")
+    print(" Transformer Architecture PASSED")
 
 def test_signal_engine():
     """Test TopoSignalEngine"""
@@ -138,7 +138,7 @@ def test_signal_engine():
     assert 1 <= leverage <= 25, "Leverage must be in [1, 25]"
     assert 0 <= confidence <= 1, "Confidence must be in [0, 1]"
     
-    print("✅ Signal Engine PASSED")
+    print(" Signal Engine PASSED")
 
 def test_risk_controls():
     """Test Nuclear Risk Controls"""
@@ -146,23 +146,23 @@ def test_risk_controls():
     print("TEST 4: Nuclear Risk Controls")
     print("="*60)
     
-    from src.risk.nuclear_controls import NuclearRiskControls
+    from src.risk.risk_controls import RiskControls
     
-    controls = NuclearRiskControls(
+    controls = RiskControls(
         tti_threshold=3.0,
         confidence_min=0.6,
         daily_dd_limit=0.035
     )
     
-    # Test TTI kill-switch
+    # Test TTI circuit breaker
     should_flatten, reason = controls.should_flatten(
         tti=3.5, daily_equity=9000, start_equity=10000
     )
     print(f"High TTI (3.5): Flatten={should_flatten}, Reason={reason}")
     assert should_flatten, "Should flatten on high TTI"
     
-    # Test daily DD kill-switch
-    controls2 = NuclearRiskControls()
+    # Test daily DD circuit breaker
+    controls2 = RiskControls()
     should_flatten, reason = controls2.should_flatten(
         tti=1.0, daily_equity=9600, start_equity=10000
     )
@@ -178,12 +178,12 @@ def test_risk_controls():
     print(f"High Confidence (0.9): Capped Leverage={capped_lev:.1f}x")
     assert capped_lev > 1.0, "Should allow higher leverage on high confidence"
     
-    print("✅ Risk Controls PASSED")
+    print(" Risk Controls PASSED")
 
 def run_all_tests():
     """Run complete test suite"""
     print("\n" + "="*60)
-    print("🦅 TOPOOMEGA v2.0 TEST SUITE")
+    print(" TOPOOMEGA v2.0 TEST SUITE")
     print("="*60)
     
     try:
@@ -193,11 +193,11 @@ def run_all_tests():
         test_risk_controls()
         
         print("\n" + "="*60)
-        print("✅ ALL TESTS PASSED - TOPOOMEGA v2.0 OPERATIONAL")
+        print(" ALL TESTS PASSED - TOPOOMEGA v2.0 OPERATIONAL")
         print("="*60)
         
     except Exception as e:
-        print(f"\n❌ TEST FAILED: {e}")
+        print(f"\n TEST FAILED: {e}")
         import traceback
         traceback.print_exc()
 

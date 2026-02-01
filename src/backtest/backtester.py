@@ -144,7 +144,7 @@ class Backtester:
         plt.tight_layout()
         plt.savefig(filename, dpi=150)
         plt.close()
-        print(f"✅ Equity curve saved to {filename}")
+        print(f" Equity curve saved to {filename}")
 
 if __name__ == "__main__":
     # Load model
@@ -188,4 +188,4 @@ if __name__ == "__main__":
     
     backtester.plot_equity_curve(equity_curve)
     
-    print("\n✅ Backtest complete!")
+    print("\n Backtest complete!")

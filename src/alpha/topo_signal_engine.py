@@ -7,7 +7,7 @@ import torch
 from src.topology.integrator import TopologyIntegrator
 from src.forecasting.topo_transformer import TopologicalTransformer
 from src.rl.wasserstein_ppo import WassersteinPPOAgent, TopologicalTradingEnv
-from src.risk.nuclear_controls import NuclearRiskControls
+from src.risk.nuclear_controls import RiskControls
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 class TopoSignalEngine:
@@ -18,7 +18,7 @@ class TopoSignalEngine:
     1. TopologyIntegrator → Loop Score, TTI, persistence images
     2. TopologicalTransformer → 48h H1 dissolution forecast
     3. WassersteinPPOAgent → Dynamic position sizing (1x-25x)
-    4. NuclearRiskControls → TTI kill-switch, confidence caps
+    4. RiskControls → TTI circuit breaker, confidence caps
     """
     
     def __init__(self, enable_transformer=True, enable_ppo=True):
@@ -51,7 +51,7 @@ class TopoSignalEngine:
         self.ppo_agent = None
         
         # Risk controls
-        self.risk_controls = NuclearRiskControls(
+        self.risk_controls = RiskControls(
             tti_threshold=3.0,
             confidence_min=0.6,
             daily_dd_limit=0.035,

@@ -88,7 +88,7 @@ class FastTopologyDataset:
         X = np.array(features_list)
         y = np.array(labels_list)
         
-        print(f"\n✅ Generated {len(X)} samples")
+        print(f"\n Generated {len(X)} samples")
         print(f"Feature shape: {X.shape}")
         print(f"Label distribution: {np.bincount(y + 1)}")  # +1 to handle -1, 0, 1
         
@@ -111,11 +111,11 @@ class FastTopologyDataset:
         with open('src/data/topology_dataset/fast_dataset.pkl', 'wb') as f:
             pickle.dump(dataset, f)
             
-        print(f"\n💾 Saved to src/data/topology_dataset/fast_dataset.pkl")
+        print(f"\n Saved to src/data/topology_dataset/fast_dataset.pkl")
         
         return dataset
 
 if __name__ == "__main__":
     generator = FastTopologyDataset(lookback=50)
     dataset = generator.generate('src/data/historical/btc_15m.parquet')
-    print("\n✅ Fast dataset ready!")
+    print("\n Fast dataset ready!")

@@ -48,7 +48,7 @@ class ProfessionalFreeFetcher:
             output_dir: Where to save parquet files
         """
         
-        print(f"🚀 Fetching {symbol} @ {timeframe} from {start_date}")
+        print(f" Fetching {symbol} @ {timeframe} from {start_date}")
         print(f"Source: Binance (Free, Unlimited)")
         print("=" * 60)
         
@@ -81,14 +81,14 @@ class ProfessionalFreeFetcher:
                 # Progress
                 if page % 10 == 0:
                     last_date = datetime.fromtimestamp(candles[-1][0] / 1000)
-                    print(f"  📦 Fetched {len(all_candles):,} candles (up to {last_date.date()})")
+                    print(f"   Fetched {len(all_candles):,} candles (up to {last_date.date()})")
                 
                 # Respect rate limits (1200ms = ~50 req/min)
                 time.sleep(0.05)
                 
             except Exception as e:
-                print(f"  ⚠️  Error on page {page}: {e}")
-                print(f"  🔄 Retrying in 5s...")
+                print(f"    Error on page {page}: {e}")
+                print(f"   Retrying in 5s...")
                 time.sleep(5)
                 continue
         
@@ -111,7 +111,7 @@ class ProfessionalFreeFetcher:
         
         df.to_parquet(filepath, compression='snappy', index=False)
         
-        print(f"\n✅ Complete!")
+        print(f"\n Complete!")
         print(f"  Total candles: {len(df):,}")
         print(f"  Date range: {df['timestamp'].min()} → {df['timestamp'].max()}")
         print(f"  File: {filepath}")
@@ -137,7 +137,7 @@ class ProfessionalFreeFetcher:
                 df = self.fetch_complete_history(symbol, timeframe, start_date)
                 results[symbol] = df
             except Exception as e:
-                print(f"❌ Failed to fetch {symbol}: {e}")
+                print(f" Failed to fetch {symbol}: {e}")
                 continue
         
         return results
@@ -147,31 +147,31 @@ class ProfessionalFreeFetcher:
         
         # Check for NaNs
         if df.isnull().any().any():
-            print("  ⚠️  Warning: NaN values detected")
+            print("    Warning: NaN values detected")
         
         # Check for duplicates
         dupes = df['timestamp'].duplicated().sum()
         if dupes > 0:
-            print(f"  ⚠️  Warning: {dupes} duplicate timestamps (removing)")
+            print(f"    Warning: {dupes} duplicate timestamps (removing)")
             df.drop_duplicates(subset='timestamp', inplace=True)
         
         # Check for zero/negative prices
         bad_prices = (df[['open', 'high', 'low', 'close']] <= 0).any().any()
         if bad_prices:
-            print("  ⚠️  Warning: Invalid prices detected")
+            print("    Warning: Invalid prices detected")
         
         # Check chronological order
         if not df['timestamp'].is_monotonic_increasing:
-            print("  ⚠️  Warning: Timestamps not in order (sorting)")
+            print("    Warning: Timestamps not in order (sorting)")
             df.sort_values('timestamp', inplace=True)
         
-        print(f"  ✅ Data validation passed")
+        print(f"   Data validation passed")
 
 if __name__ == "__main__":
     fetcher = ProfessionalFreeFetcher()
     
     # Fetch BTC (2020-2024, ~4.5 years, ~140k candles)
-    print("🦅 PROFESSIONAL FREE DATA FETCHER\n")
+    print(" PROFESSIONAL FREE DATA FETCHER\n")
     
     # Single asset (fast test)
     df = fetcher.fetch_complete_history(
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     # )
     
     print("\n" + "="*60)
-    print("📊 READY FOR TRAINING")
+    print(" READY FOR TRAINING")
     print("="*60)
     print(f"""
 Next steps:
@@ -196,7 +196,7 @@ Next steps:
 2. Validate across 2020-2024 regimes
 3. If profitable → Upgrade to Tardis.dev ($99/month)
 
-Data quality: ⭐⭐⭐⭐ (Institutional-grade, free)
+Data quality:  (Institutional-grade, free)
 Coverage: 2020-2024 (5 years, all major regimes)
-Cost: $0 💰
+Cost: $0 
 """)

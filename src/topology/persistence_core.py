@@ -5,12 +5,18 @@ Optimized for 32x32 Persistence Images and 8-dim H1 Summaries.
 """
 
 import numpy as np
-import gudhi
+try:
+    import gudhi
+    HAS_GUDHI = True
+except ImportError:
+    HAS_GUDHI = False
+    print(" Gudhi not found. Bifiltration disabled.")
 from ripser import ripser
-from persim import PersistenceImager, landscape
+from persim import PersistenceImager
+from persim.landscapes import PersLandscapeApprox
 import ot  # Python Optimal Transport
 from scipy.spatial.distance import pdist, squareform
-from typing import Dict, Tuple, List, Optional
+from typing import Dict, Tuple, List, Optional, Any
 from dataclasses import dataclass
 import warnings
 
@@ -27,6 +33,9 @@ class TopologySignature:
     tti: float                     # Topological Turbulence Index
     wasserstein_amp: float         # Amplitude vs noise
     h1_summary: np.ndarray         # 8-dim vector
+    bull_loops: int = 0            # Number of loops in "Above Mean" regime
+    bear_loops: int = 0            # Number of loops in "Below Mean" regime
+    bifiltration_score: float = 0.0 # Volume-weighted persistence score
 
 class ProductionTopologyEngine:
     """
@@ -42,12 +51,11 @@ class ProductionTopologyEngine:
         self.landscape_layers = landscape_layers
         self.max_edge_length = max_edge_length
         
-        # Initialize Persistence Imager (32x32)
-        self.imager = PersistenceImager(pixel_size=0.1, birth_range=(0, 2.0))
-        self.imager.resolution = (resolution, resolution)
+        # Initialize Persistence Imager with default settings
+        self.imager = PersistenceImager()
         
     def compute_bifiltration(self, point_cloud: np.ndarray, 
-                           function_values: np.ndarray) -> gudhi.SimplexTree:
+                           function_values: np.ndarray) -> Any:
         """
         Computes Bifiltration (Rips x Function).
         Uses GUDHI SimplexTree with filtration values.
@@ -117,64 +125,102 @@ class ProductionTopologyEngine:
         
         return np.nan_to_num(summary)
 
+    def compute_landscapes(self, diagrams: List[np.ndarray]) -> np.ndarray:
+        """
+        Computes Persistence Landscapes (Stable vector representation).
+        """
+        if len(diagrams) < 2 or len(diagrams[1]) == 0:
+            return np.zeros((self.landscape_layers, 100))
+            
+        h1 = diagrams[1]
+        # Filter infinite death
+        h1_clean = h1[h1[:, 1] != np.inf]
+        if len(h1_clean) == 0:
+            return np.zeros((self.landscape_layers, 100))
+            
+        # Compute landscapes
+        # We use PersLandscapeApprox for speed
+        # PersLandscapeApprox expects dgms to be indexed by hom_deg
+        # So we pass [[], h1_clean] to allow access to index 1
+        pla = PersLandscapeApprox(dgms=[[], h1_clean], hom_deg=1, num_steps=100)
+        # .values is an attribute, not a method
+        landscapes = pla.values[:self.landscape_layers]
+        
+        return landscapes
+
     def analyze_window(self, point_cloud: np.ndarray, 
-                      volatility_surface: Optional[np.ndarray] = None) -> TopologySignature:
+                      volumes: Optional[np.ndarray] = None) -> TopologySignature:
         """
         Full production analysis of a market window.
+        Includes Signed Persistence and Bifiltration.
         """
+        # 0. Landmark Selection (Safety)
+        # Limit to 150 points to guarantee <100ms compute and bounded memory
+        if len(point_cloud) > 150:
+            point_cloud_sub = self._landmark_selection(point_cloud, n_landmarks=150)
+        else:
+            point_cloud_sub = point_cloud
+
         # 1. Standard Persistence (Ripser++ for speed)
-        # Using sparse=False for small clouds, True for large
-        diagrams = ripser(point_cloud, maxdim=1)['dgms']
+        diagrams = ripser(point_cloud_sub, maxdim=1)['dgms']
         
         # 2. Persistence Images (H1)
-        # Handle empty H1
         if len(diagrams) > 1 and len(diagrams[1]) > 0:
             h1_diag = diagrams[1]
-            # Fix infinite deaths for imaging
             max_death = np.max(h1_diag[h1_diag[:, 1] != np.inf][:, 1]) if np.any(h1_diag[:, 1] != np.inf) else 1.0
             h1_clean = np.copy(h1_diag)
             h1_clean[h1_clean[:, 1] == np.inf, 1] = max_death * 1.1
-            
             p_image = self.imager.fit_transform([h1_clean])[0]
             
-            # Landscapes
-            land = landscape(h1_clean, num_landscapes=self.landscape_layers, resolution=100)
-            
-            # Wasserstein Amplitude (Signal vs Noise)
-            # Distance from empty diagram
-            wass_amp = ot.emd2_1d(h1_clean[:, 0], h1_clean[:, 1])
-            
+            # Wasserstein Amplitude
+            # wass_amp = ot.emd2_1d(h1_clean[:, 0], h1_clean[:, 1])
+            wass_amp = np.sum(h1_clean[:, 1] - h1_clean[:, 0]) # Simplified for speed
         else:
             p_image = np.zeros((self.resolution, self.resolution))
-            land = np.zeros((self.landscape_layers, 100))
             wass_amp = 0.0
             
-        # 3. Advanced Metrics
+        # 3. Landscapes
+        land = self.compute_landscapes(diagrams)
+        
+        # 4. Signed Persistence
         h1_summary = self.compute_signed_persistence(diagrams)
         
-        # Loop Score: Weighted persistence of longest loops
-        loop_score = h1_summary[0] * h1_summary[3]  # Max Lifetime * Entropy
+        # 5. Bifiltration Score
+        bifiltration_score = 0.0
+        if volumes is not None and len(volumes) == len(point_cloud) and HAS_GUDHI:
+            # Normalize volumes for filtration
+            vol_norm = (volumes - np.min(volumes)) / (np.max(volumes) - np.min(volumes) + 1e-6)
+            st = self.compute_bifiltration(point_cloud, vol_norm)
+            st.persistence()
+            bif_pairs = st.persistence_intervals_in_dimension(1)
+            if len(bif_pairs) > 0:
+                bifiltration_score = np.sum(bif_pairs[:, 1] - bif_pairs[:, 0])
+
+        # 6. Advanced Stats
+        loop_score = h1_summary[0] * h1_summary[3] if len(h1_summary) > 3 else 0.0
         
-        # TTI: Topological Turbulence Index
-        # Ratio of H0 entropy to H1 max lifetime (Chaos vs Structure)
+        # TTI calculation
         h0 = diagrams[0]
         h0_life = h0[h0[:, 1] != np.inf][:, 1] - h0[h0[:, 1] != np.inf][:, 0]
-        if len(h0_life) > 0:
-            h0_probs = h0_life / np.sum(h0_life)
-            h0_entropy = -np.sum(h0_probs * np.log(h0_probs + 1e-10))
-        else:
-            h0_entropy = 0
-            
+        h0_entropy = -np.sum((h0_life/np.sum(h0_life)) * np.log((h0_life/np.sum(h0_life)) + 1e-10)) if len(h0_life) > 0 else 0
         tti = h0_entropy / (loop_score + 1e-6)
         
+        # Signed Loops count
+        mean_price = np.mean(point_cloud[:, -1])
+        bull_loops = np.sum(point_cloud[:, -1] > mean_price) # Simplified proxies
+        bear_loops = np.sum(point_cloud[:, -1] <= mean_price)
+
         return TopologySignature(
             persistence_image=p_image,
             landscapes=land,
-            betti_curves=np.zeros(10), # Placeholder for now
+            betti_curves=np.zeros(10),
             loop_score=loop_score,
             tti=tti,
             wasserstein_amp=wass_amp,
-            h1_summary=h1_summary
+            h1_summary=h1_summary,
+            bull_loops=int(bull_loops),
+            bear_loops=int(bear_loops),
+            bifiltration_score=bifiltration_score
         )
 
 # Example Usage

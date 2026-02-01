@@ -55,7 +55,7 @@ class MaxLearningPipeline:
         # Loss function
         criterion = nn.MSELoss()
         
-        print("🔥 MAXIMUM LEARNING MODE ACTIVATED")
+        print(" MAXIMUM LEARNING MODE ACTIVATED")
         print(f"Device: {self.device}")
         print(f"Model: {sum(p.numel() for p in self.model.parameters())/1e6:.1f}M params")
         print(f"Max Epochs: {max_epochs}")
@@ -144,7 +144,7 @@ class MaxLearningPipeline:
                     'history': self.history
                 }, 'models/topolomega_best.pth')
                 
-                print(f"  ✅ NEW BEST! (improved by {improvement:.6f})")
+                print(f"   NEW BEST! (improved by {improvement:.6f})")
             else:
                 self.patience_counter += 1
                 print(f"  No improvement ({self.patience_counter}/{self.max_patience})")
@@ -154,7 +154,7 @@ class MaxLearningPipeline:
             
             # Aggressive early stopping (only after VERY long plateau)
             if self.patience_counter >= self.max_patience:
-                print(f"\n🛑 CONVERGENCE REACHED after {epoch+1} epochs")
+                print(f"\n CONVERGENCE REACHED after {epoch+1} epochs")
                 print(f"Best Val Loss: {self.best_loss:.6f}")
                 break
             
@@ -166,7 +166,7 @@ class MaxLearningPipeline:
         self.save_history()
         
         print("\n" + "="*60)
-        print("🏁 TRAINING COMPLETE")
+        print(" TRAINING COMPLETE")
         print("="*60)
         print(f"Total Epochs: {epoch+1}")
         print(f"Best Val Loss: {self.best_loss:.6f}")
@@ -193,5 +193,5 @@ class MaxLearningPipeline:
             json.dump(history_json, f, indent=2)
 
 if __name__ == "__main__":
-    print("⚠️  Run this via train_full_pipeline.py")
+    print("  Run this via train_full_pipeline.py")
     print("This is a module, not a standalone script.")

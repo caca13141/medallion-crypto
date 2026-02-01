@@ -8,7 +8,7 @@ from src.core.logger import setup_logger
 from src.core.monitor import Monitor
 from src.data.feed import HyperliquidFeed
 from src.alpha.topo_signal_engine import TopoSignalEngine
-from src.risk.nuclear_controls import NuclearRiskControls
+from src.risk.nuclear_controls import RiskControls
 from src.execution.router import Router
 
 logger = setup_logger("TOPO_OMEGA_ENGINE")
@@ -28,7 +28,7 @@ class TopoOmegaEngine:
         )
         
         # Risk controls
-        self.risk_controls = NuclearRiskControls(
+        self.risk_controls = RiskControls(
             tti_threshold=3.0,
             confidence_min=0.6,
             daily_dd_limit=0.035,

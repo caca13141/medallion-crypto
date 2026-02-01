@@ -1,140 +1,165 @@
 """
-JPM/RenTech On-Chain Fusion Engine (2025 Production)
-Implements Wallet Clustering and Transfer Graph Persistence.
-Detects "Smart Money" flow topology before price impact.
+ON-CHAIN GRAPH INTELLIGENCE ENGINE
+Analyzes the topology of transaction flows to detect Smart Money clusters.
+Uses NetworkX for graph structure and GUDHI for topological feature extraction.
 """
 
 import networkx as nx
 import numpy as np
-import pandas as pd
-from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import connected_components
-from typing import List, Dict, Tuple
+import gudhi
 from dataclasses import dataclass
+from typing import List, Dict, Tuple, Optional
+import random
 
 @dataclass
-class WalletCluster:
-    cluster_id: int
-    size: int
-    total_balance: float
-    smart_money_score: float
-    persistence_h1: float  # Flow cyclicity
+class GraphSignature:
+    num_clusters: int
+    max_clique_size: int
+    flow_persistence: float  # Persistence of money flow loops
+    centrality_entropy: float # Diversity of important actors
+    smart_money_score: float # 0-100 score
 
-class OnChainGraphEngine:
-    """
-    Nansen-level Wallet Clustering & Flow Topology.
-    """
-    def __init__(self, min_transfer_value: float = 10000.0):
+class WalletGraph:
+    def __init__(self):
         self.graph = nx.DiGraph()
-        self.min_transfer_value = min_transfer_value
-        self.clusters = {}
+        self.smart_wallets = set()
         
-    def ingest_transfers(self, transfers: List[Dict]):
+    def update_graph(self, transactions: List[Dict]):
         """
-        Ingest raw transfer events: [{from, to, value, token, timestamp}]
+        Update graph with new transactions.
+        transactions: list of {from, to, value, timestamp}
         """
-        for t in transfers:
-            if t['value'] < self.min_transfer_value:
-                continue
-                
-            # Add edges with weights (value) and timestamps
-            u, v = t['from'], t['to']
-            if self.graph.has_edge(u, v):
-                self.graph[u][v]['weight'] += t['value']
-                self.graph[u][v]['count'] += 1
-                self.graph[u][v]['last_seen'] = t['timestamp']
-            else:
-                self.graph.add_edge(u, v, weight=t['value'], count=1, last_seen=t['timestamp'])
+        for tx in transactions:
+            self.graph.add_edge(tx['from'], tx['to'], weight=tx['value'], timestamp=tx['timestamp'])
+            
+        # Prune old edges to keep graph relevant (sliding window)
+        # For simulation, we'll just keep the graph size manageable
+        if self.graph.number_of_edges() > 1000:
+            edges = list(self.graph.edges(data=True))
+            edges.sort(key=lambda x: x[2]['timestamp'])
+            self.graph.remove_edges_from([(e[0], e[1]) for e in edges[:200]])
 
-    def compute_wallet_clusters(self) -> List[WalletCluster]:
+    def compute_topology(self) -> GraphSignature:
         """
-        Detects entities using heuristic clustering (deposit address reuse, etc.)
-        Simplified for this implementation: Weakly Connected Components on high-value flows.
+        Compute topological features of the wallet graph.
         """
-        # Filter for significant connections
-        significant_edges = [
-            (u, v) for u, v, d in self.graph.edges(data=True) 
-            if d['weight'] > self.min_transfer_value * 10
-        ]
-        
-        subgraph = self.graph.edge_subgraph(significant_edges).to_undirected()
-        components = list(nx.connected_components(subgraph))
-        
-        clusters = []
-        for idx, comp in enumerate(components):
-            # Calculate metrics
-            total_vol = sum(self.graph.degree(n, weight='weight') for n in comp)
+        if self.graph.number_of_nodes() < 5:
+            return GraphSignature(0, 0, 0.0, 0.0, 0.0)
             
-            # Smart Money Heuristic: High volume, low count (Whale) vs Low vol, high count (Retail)
-            avg_tx_size = total_vol / (sum(self.graph.degree(n, weight='count') for n in comp) + 1)
-            smart_score = np.log10(avg_tx_size + 1)
-            
-            clusters.append(WalletCluster(
-                cluster_id=idx,
-                size=len(comp),
-                total_balance=total_vol, # Proxy
-                smart_money_score=smart_score,
-                persistence_h1=0.0 # Placeholder for flow topology
-            ))
-            
-        return sorted(clusters, key=lambda x: x.smart_money_score, reverse=True)
-
-    def compute_flow_persistence(self) -> float:
-        """
-        Computes H1 persistence of the transaction graph.
-        High H1 = Circular flow (Wash trading / Market making loops).
-        """
-        # Convert to distance matrix (Inverse of flow weight)
-        nodes = list(self.graph.nodes())
-        n = len(nodes)
-        if n < 3:
-            return 0.0
-            
-        # Sparse adjacency
-        adj = nx.to_scipy_sparse_array(self.graph, weight='weight')
+        # 1. Cluster Analysis (Community Detection)
+        # Using simple connected components for directed graph (weakly connected)
+        clusters = list(nx.weakly_connected_components(self.graph))
+        num_clusters = len(clusters)
         
-        # Invert weights for distance: dist = 1 / (weight + epsilon)
-        # This makes high volume flows "close"
-        adj.data = 1.0 / (adj.data + 1e-6)
-        
-        # Compute Persistent Homology on Graph (Vietoris-Rips on metric space)
-        # For speed, we use a proxy: Cycle basis count weighted by flow
+        # 2. Clique Analysis (Dense subgroups)
+        # Finding cliques in directed graph is hard, treat as undirected for this metric
+        undirected = self.graph.to_undirected()
+        # Max clique approximation
         try:
-            cycles = nx.cycle_basis(self.graph.to_undirected())
-            persistence_sum = 0.0
-            for cycle in cycles:
-                # Flow strength of cycle = min edge weight in cycle
-                weights = []
-                for i in range(len(cycle)):
-                    u, v = cycle[i], cycle[(i+1)%len(cycle)]
-                    if self.graph.has_edge(u, v):
-                        weights.append(self.graph[u][v]['weight'])
-                    elif self.graph.has_edge(v, u):
-                        weights.append(self.graph[v][u]['weight'])
-                    else:
-                        weights.append(0)
-                
-                cycle_strength = min(weights) if weights else 0
-                persistence_sum += cycle_strength
-                
-            return persistence_sum
+            max_clique = nx.graph_clique_number(undirected)
         except:
-            return 0.0
+            max_clique = 0
+            
+        # 3. Flow Persistence (Topological Loops)
+        # We convert the graph to a simplex tree where:
+        # - Vertices are wallets (as INTEGERS)
+        # - Edges are weighted by 1/value (high value = short distance)
+        
+        # Map wallet addresses to integers
+        nodes = list(self.graph.nodes())
+        node_to_int = {node: i for i, node in enumerate(nodes)}
+        
+        st = gudhi.SimplexTree()
+        
+        for u, v, data in self.graph.edges(data=True):
+            # Invert value for filtration: bigger transfer = 'closer' connection
+            weight = 1.0 / (data['weight'] + 1e-6)
+            # Convert nodes to integers
+            u_int = node_to_int[u]
+            v_int = node_to_int[v]
+            st.insert([u_int, v_int], filtration=weight)
+            
+        st.initialize_filtration()
+        st.persistence()
+        
+        # H1 persistence (loops)
+        h1 = st.persistence_intervals_in_dimension(1)
+        flow_persistence = 0.0
+        if len(h1) > 0:
+            # Sum of lifetimes of loops
+            flow_persistence = np.sum(h1[:, 1] - h1[:, 0])
+            
+        # 4. Centrality Entropy (Concentration of power)
+        try:
+            centrality = nx.pagerank(self.graph)
+            values = np.array(list(centrality.values()))
+            values = values / np.sum(values)
+            centrality_entropy = -np.sum(values * np.log(values + 1e-10))
+        except:
+            centrality_entropy = 0.0
+            
+        # 5. Smart Money Score
+        # Heuristic combination
+        # High flow persistence + High max clique = Coordinated Smart Money
+        smart_money_score = min(100, (flow_persistence * 10 + max_clique * 5))
+        
+        return GraphSignature(
+            num_clusters=num_clusters,
+            max_clique_size=max_clique,
+            flow_persistence=flow_persistence,
+            centrality_entropy=centrality_entropy,
+            smart_money_score=smart_money_score
+        )
 
+    def simulate_data(self, num_tx=50):
+        """
+        Generate synthetic transaction data for demonstration.
+        Creates a 'Smart Money' cluster pattern.
+        """
+        txs = []
+        
+        # Create a "Smart Money" ring
+        smart_cluster = [f"0xSmart{i}" for i in range(5)]
+        for i in range(len(smart_cluster)):
+            txs.append({
+                'from': smart_cluster[i],
+                'to': smart_cluster[(i+1)%len(smart_cluster)],
+                'value': random.uniform(50000, 200000), # High value
+                'timestamp': 1234567890
+            })
+            
+        # Random noise
+        for _ in range(num_tx - 5):
+            txs.append({
+                'from': f"0xUser{random.randint(0, 20)}",
+                'to': f"0xUser{random.randint(0, 20)}",
+                'value': random.uniform(100, 5000), # Low value
+                'timestamp': 1234567890
+            })
+            
+        self.update_graph(txs)
+
+    def update_and_get_signal(self, current_price: float) -> float:
+        """
+        Update graph with latest on-chain data and return Smart Money Score.
+        """
+        # In production, this would fetch real mempool/block data
+        # For now, we simulate activity based on price action (mock)
+        
+        # Simulate more activity if price is high (FOMO)
+        num_tx = int(50 + (current_price / 10000))
+        self.simulate_data(num_tx=min(num_tx, 100))
+        
+        # Compute topology
+        sig = self.compute_topology()
+        
+        return sig.smart_money_score
+
+# Example Usage
 if __name__ == "__main__":
-    engine = OnChainGraphEngine()
-    # Simulate transfers
-    transfers = [
-        {'from': 'A', 'to': 'B', 'value': 100000, 'timestamp': 1},
-        {'from': 'B', 'to': 'C', 'value': 100000, 'timestamp': 2},
-        {'from': 'C', 'to': 'A', 'value': 100000, 'timestamp': 3}, # Loop
-        {'from': 'D', 'to': 'E', 'value': 500, 'timestamp': 4},     # Noise
-    ]
-    engine.ingest_transfers(transfers)
-    
-    clusters = engine.compute_wallet_clusters()
-    flow_h1 = engine.compute_flow_persistence()
-    
-    print(f"Clusters: {len(clusters)}")
-    print(f"Top Cluster Score: {clusters[0].smart_money_score:.2f}")
-    print(f"Flow Persistence (H1): {flow_h1:.2f}")
+    wg = WalletGraph()
+    wg.simulate_data()
+    sig = wg.compute_topology()
+    print(f"Smart Money Score: {sig.smart_money_score:.2f}")
+    print(f"Flow Persistence: {sig.flow_persistence:.4f}")
+    print(f"Max Clique: {sig.max_clique_size}")

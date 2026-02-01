@@ -26,11 +26,21 @@ class Config:
     MAX_DRAWDOWN_LIMIT = 0.10
     LEVERAGE_LIMIT = 1 # Optimized to 1x (Spot-like safety)
 
-    # Transformer Parameters
+    # Transformer Parameters (Legacy - do not use for TopoTransformer)
     TRANSFORMER_D_MODEL = 64
     TRANSFORMER_NHEAD = 4
     TRANSFORMER_LAYERS = 2
     TRANSFORMER_INPUT_DIM = 5 # c, o, h, l, v
+    
+    # 2025 Model Configuration (Stability Mode)
+    # Use these values across all new files
+    MODEL_CONFIG = {
+        "d_model": 512,
+        "nhead": 8,
+        "num_layers": 12,
+        "num_experts": 8,
+        "dropout": 0.1
+    }
     
     # Model Persistence & Training
     MODEL_PATH = "src/data/brain.pth"

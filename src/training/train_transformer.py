@@ -52,8 +52,8 @@ def train_transformer():
     
     # Check if full dataset exists
     if not os.path.exists('src/data/topology_dataset/train.pkl'):
-        print("❌ Full topology dataset not ready yet.")
-        print("⏳ Waiting for topology_dataset_generator.py to complete...")
+        print(" Full topology dataset not ready yet.")
+        print(" Waiting for topology_dataset_generator.py to complete...")
         print("\nRun this script again once dataset generation is complete.")
         return
     
@@ -90,7 +90,7 @@ def train_transformer():
     trainer = TopoTransformerTrainer(model, lr=1e-4)
     
     # Training loop
-    print("\n🚀 Starting training...")
+    print("\n Starting training...")
     best_val_acc = 0
     patience = 10
     patience_counter = 0
@@ -129,7 +129,7 @@ def train_transformer():
             patience_counter = 0
             # Save best model
             torch.save(model.state_dict(), 'src/data/topo_transformer_trained.pth')
-            print(f"✅ New best model saved (acc={val_acc:.3f})")
+            print(f" New best model saved (acc={val_acc:.3f})")
         else:
             patience_counter += 1
             if patience_counter >= patience:
@@ -140,7 +140,7 @@ def train_transformer():
     with open('results/transformer_training_log.json', 'w') as f:
         json.dump(history, f, indent=2)
     
-    print(f"\n✅ Training complete!")
+    print(f"\n Training complete!")
     print(f"Best validation accuracy: {best_val_acc:.3f}")
     print(f"Model saved to: src/data/topo_transformer_trained.pth")
 

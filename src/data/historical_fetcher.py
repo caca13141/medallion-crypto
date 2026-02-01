@@ -91,10 +91,10 @@ class HistoricalFetcher:
             # Sort by time
             df = df.sort_values('t').reset_index(drop=True)
             
-            print(f"✅ Total {len(df)} candles from {df['t'].min()} to {df['t'].max()}")
+            print(f" Total {len(df)} candles from {df['t'].min()} to {df['t'].max()}")
             return df
         else:
-            print(f"❌ No data fetched")
+            print(f" No data fetched")
             return pd.DataFrame()
     
     def fetch_all(self, interval='15m'):
@@ -108,13 +108,13 @@ class HistoricalFetcher:
                 # Save to parquet (efficient storage)
                 filename = f'src/data/historical/{coin.lower()}_{interval}.parquet'
                 df.to_parquet(filename)
-                print(f"💾 Saved {coin} to {filename}")
+                print(f" Saved {coin} to {filename}")
             else:
-                print(f"⚠️  No data for {coin}")
+                print(f"  No data for {coin}")
             
             time.sleep(1)  # Rate limit between coins
         
-        print("\n✅ Historical data fetch complete!")
+        print("\n Historical data fetch complete!")
 
 if __name__ == "__main__":
     fetcher = HistoricalFetcher(coins=['BTC'], start_date='2024-01-01')

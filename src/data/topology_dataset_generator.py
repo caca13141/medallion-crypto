@@ -105,7 +105,7 @@ class TopologyDatasetGenerator:
             if key != 'timestamps':
                 dataset[key] = np.array(dataset[key])
         
-        print(f"\n✅ Generated {len(dataset['loop_scores'])} samples")
+        print(f"\n Generated {len(dataset['loop_scores'])} samples")
         print(f"Loop score range: [{dataset['loop_scores'].min():.3f}, {dataset['loop_scores'].max():.3f}]")
         print(f"TTI range: [{dataset['ttis'].min():.3f}, {dataset['ttis'].max():.3f}]")
         print(f"Dissolution time range: [0, {dataset['labels_time'].max()}]")
@@ -143,7 +143,7 @@ class TopologyDatasetGenerator:
         with open('src/data/topology_dataset/test.pkl', 'wb') as f:
             pickle.dump(test, f)
             
-        print("\n💾 Saved datasets to src/data/topology_dataset/")
+        print("\n Saved datasets to src/data/topology_dataset/")
 
 if __name__ == "__main__":
     generator = TopologyDatasetGenerator(lookback=100, forecast_horizon=48)
@@ -157,4 +157,4 @@ if __name__ == "__main__":
     # Save
     generator.save_datasets(train, val, test)
     
-    print("\n✅ Phase 1 Complete: Topology dataset ready for training!")
+    print("\n Phase 1 Complete: Topology dataset ready for training!")

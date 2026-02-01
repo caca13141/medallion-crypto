@@ -49,16 +49,16 @@ class TopologyDataset(Dataset):
         )
 
 def train():
-    print("🚀 STARTING PRODUCTION TRAINING")
+    print(" STARTING PRODUCTION TRAINING")
     
     if torch.cuda.is_available():
         device = 'cuda'
     elif torch.backends.mps.is_available():
         device = 'mps'
-        print("⚡ Using Apple Metal (MPS) Acceleration")
+        print(" Using Apple Metal (MPS) Acceleration")
     else:
         device = 'cpu'
-        print("⚠️  Using CPU (Slow)")
+        print("  Using CPU (Slow)")
         
     print(f"Device: {device}")
     

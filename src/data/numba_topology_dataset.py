@@ -129,7 +129,7 @@ class NumbaTopologyDataset:
         X = np.array(features_list)
         y = np.array(labels_list)
         
-        print(f"\n✅ Generated {len(X)} samples")
+        print(f"\n Generated {len(X)} samples")
         print(f"Feature shape: {X.shape}")
         
         # Split
@@ -151,7 +151,7 @@ class NumbaTopologyDataset:
         with open('src/data/topology_dataset/numba_dataset.pkl', 'wb') as f:
             pickle.dump(dataset, f)
             
-        print(f"\n💾 Saved to src/data/topology_dataset/numba_dataset.pkl")
+        print(f"\n Saved to src/data/topology_dataset/numba_dataset.pkl")
         
         return dataset
 
@@ -160,13 +160,13 @@ if __name__ == "__main__":
     
     generator = NumbaTopologyDataset(lookback=50)
     
-    print("🚀 NUMBA-ACCELERATED MODE")
+    print(" NUMBA-ACCELERATED MODE")
     print("=" * 60)
     
     start = time.time()
     dataset = generator.generate('src/data/historical/btc_15m.parquet')
     elapsed = time.time() - start
     
-    print(f"\n⚡ Total time: {elapsed:.2f}s")
-    print(f"⚡ Speed: {len(dataset['X_train']) + len(dataset['X_val']) + len(dataset['X_test']):.0f} samples / {elapsed:.2f}s = {(len(dataset['X_train']) + len(dataset['X_val']) + len(dataset['X_test']))/elapsed:.0f} samples/sec")
-    print("\n✅ Numba acceleration complete!")
+    print(f"\n Total time: {elapsed:.2f}s")
+    print(f" Speed: {len(dataset['X_train']) + len(dataset['X_val']) + len(dataset['X_test']):.0f} samples / {elapsed:.2f}s = {(len(dataset['X_train']) + len(dataset['X_val']) + len(dataset['X_test']))/elapsed:.0f} samples/sec")
+    print("\n Numba acceleration complete!")

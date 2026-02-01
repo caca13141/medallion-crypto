@@ -75,11 +75,11 @@ class ProductionTopologyGenerator:
             return np.zeros((self.resolution, self.resolution)), np.zeros(8)
 
     def generate(self, parquet_path, output_path):
-        print(f"🚀 Loading {parquet_path}...")
+        print(f" Loading {parquet_path}...")
         df = pd.read_parquet(parquet_path)
         prices = df.get('close', df.get('c')).values
         
-        print(f"📊 Processing {len(prices):,} candles...")
+        print(f" Processing {len(prices):,} candles...")
         print(f"   Resolution: {self.resolution}x{self.resolution}")
         print(f"   Lookback: {self.lookback}")
         
@@ -119,7 +119,7 @@ class ProductionTopologyGenerator:
         if images:
             self._save_batch(images, summaries, labels, output_path, append=os.path.exists(output_path))
             
-        print(f"✅ Generation Complete! Saved to {output_path}")
+        print(f" Generation Complete! Saved to {output_path}")
 
     def _save_batch(self, images, summaries, labels, path, append=False):
         data = {

@@ -34,7 +34,7 @@ def train_optimized_models():
     models = {}
     
     # 1. XGBoost (usually best for tabular)
-    print("\n🚀 Training XGBoost...")
+    print("\n Training XGBoost...")
     xgb = XGBClassifier(
         n_estimators=200,
         max_depth=6,
@@ -51,7 +51,7 @@ def train_optimized_models():
     models['xgboost'] = {'model': xgb, 'acc': xgb_test_acc}
     
     # 2. Gradient Boosting
-    print("\n🚀 Training Gradient Boosting...")
+    print("\n Training Gradient Boosting...")
     gb = GradientBoostingClassifier(
         n_estimators=150,
         max_depth=5,
@@ -69,7 +69,7 @@ def train_optimized_models():
     best_model = models[best_name]['model']
     best_acc = models[best_name]['acc']
     
-    print(f"\n✅ Best Model: {best_name} (Accuracy: {best_acc:.3f})")
+    print(f"\n Best Model: {best_name} (Accuracy: {best_acc:.3f})")
     
     # Detailed report
     y_pred = best_model.predict(X_test)
@@ -90,7 +90,7 @@ def train_optimized_models():
     with open('results/optimized_model_metrics.json', 'w') as f:
         json.dump(metrics, f, indent=2)
     
-    print(f"\n💾 Saved: src/models/{best_name}_optimized.pkl")
+    print(f"\n Saved: src/models/{best_name}_optimized.pkl")
     
     return best_model, best_name
 

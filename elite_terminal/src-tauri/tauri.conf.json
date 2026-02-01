@@ -1,0 +1,30 @@
+{
+    "identifier": "com.example.dashboard",
+    "build": {
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build",
+        "devUrl": "http://localhost:1420",
+        "frontendDist": "../dist"
+    },
+    "app": {
+        "windows": [
+            {
+                "title": "TOPOOMEGA // WAR ROOM",
+                "width": 1920,
+                "height": 1080,
+                "decorations": true,
+                "transparent": false,
+                "fullscreen": false,
+                "resizable": true,
+                "theme": "Dark"
+            }
+        ],
+        "security": {
+            "csp": null
+        }
+    },
+    "bundle": {
+        "active": true,
+        "targets": "all"
+    }
+}

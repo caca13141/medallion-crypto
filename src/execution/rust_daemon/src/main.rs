@@ -35,8 +35,25 @@ impl ExecutionEngine {
             rt.block_on(async move {
                 println!("🚀 Rust Execution Daemon Started (<300ms latency)");
                 
-                while let Some(order) = rx.recv().await {
-                    process_order(order).await;
+                // The original loop was:
+                // while let Some(order) = rx.recv().await {
+                //     process_order(order).await;
+                // }
+                // Replacing with a loop { match } structure as requested.
+                // Note: The provided snippet seems to be for a broadcast channel,
+                // but adapting the structure for mpsc::Receiver.
+                loop {
+                    match rx.recv().await {
+                        Some(order) => {
+                            process_order(order).await;
+                        }
+                        None => {
+                            // Sender has been dropped and channel is empty.
+                            // This is the graceful shutdown condition for mpsc.
+                            println!("Rust Execution Daemon Shutting Down: Channel closed.");
+                            break;
+                        }
+                    }
                 }
             });
         });

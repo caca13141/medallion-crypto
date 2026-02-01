@@ -79,8 +79,8 @@ def train_baseline():
     with open('results/baseline_metrics.json', 'w') as f:
         json.dump(metrics, f, indent=2)
     
-    print(f"\n✅ Model saved to src/models/baseline_rf.pkl")
-    print(f"✅ Metrics saved to results/baseline_metrics.json")
+    print(f"\n Model saved to src/models/baseline_rf.pkl")
+    print(f" Metrics saved to results/baseline_metrics.json")
     
     return rf, metrics
 
