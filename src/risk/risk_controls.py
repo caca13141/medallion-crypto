@@ -3,7 +3,7 @@ Nuclear Risk Controls: Topological Kill-Switch + Confidence Caps
 """
 import numpy as np
 
-class NuclearRiskControls:
+class RiskControls:
     """
     Advanced risk management using topology and prediction confidence.
     

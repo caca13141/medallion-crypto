@@ -98,9 +98,9 @@ export function OrderBookHeatmap({ data }: OrderBookHeatmapProps) {
             </div>
 
             {/* Depth Visualization */}
-            <div className="flex-1 flex relative overflow-hidden">
-                {/* Bids (Left Side) */}
-                <div className="flex-1 flex flex-col-reverse gap-px p-2">
+            <div className="flex-1 flex relative overflow-hidden min-h-0">
+                {/* Bids (Left Side) - Scrollable */}
+                <div className="flex-1 flex flex-col-reverse gap-px p-2 overflow-y-auto ">
                     {[...bidsWithCumulative].reverse().map((bid, idx) => {
                         const widthPercent = (bid.volume / metrics.maxVol) * 100;
                         const isHovered = hoveredLevel?.price === bid.price && hoveredLevel?.side === 'bid';
@@ -137,8 +137,8 @@ export function OrderBookHeatmap({ data }: OrderBookHeatmapProps) {
                 {/* Mid Price Line */}
                 <div className="w-px bg-gradient-to-b from-transparent via-yellow-500 to-transparent shrink-0" />
 
-                {/* Asks (Right Side) */}
-                <div className="flex-1 flex flex-col-reverse gap-px p-2">
+                {/* Asks (Right Side) - Scrollable */}
+                <div className="flex-1 flex flex-col-reverse gap-px p-2 overflow-y-auto">
                     {[...asksWithCumulative].reverse().map((ask, idx) => {
                         const widthPercent = (ask.volume / metrics.maxVol) * 100;
                         const isHovered = hoveredLevel?.price === ask.price && hoveredLevel?.side === 'ask';

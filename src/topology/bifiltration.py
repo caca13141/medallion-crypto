@@ -3,7 +3,12 @@ Bifiltrated Persistence: Correlation × Volume × Volatility
 Multi-parameter persistent homology for market microstructure
 """
 import numpy as np
-import gudhi
+try:
+    import gudhi
+    HAS_GUDHI = True
+except ImportError:
+    gudhi = None
+    HAS_GUDHI = False
 from scipy.spatial.distance import pdist, squareform
 
 class BifiltrationEngine:

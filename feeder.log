@@ -1,0 +1,1041 @@
+ Checking for model at: /Users/raphaelmaksoud/crypto toppo/src/data/models/hmm_model.pkl
+ Regime Detector Loaded (Dict format, 4 states)
+Marksman Dashboard Feeder Initializing (LIGHT_MODE=False)...
+  -> Initializing Topology Engine...
+  -> Initializing Ensemble...
+  -> Initializing DeepAlpha...
+ Checking for model at: /Users/raphaelmaksoud/crypto toppo/src/data/models/hmm_model.pkl
+ Regime Detector Loaded (Dict format, 4 states)
+ DeepAlpha Coordinator Initialized
+  -> Initializing MonteCarlo (Lightweight Mode)...
+  -> Engines Initialized.
+Connected to HYPERLIQUID (Marksman Mode)
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 10645ms | Price: 79280.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 12035ms | Price: 79321.58 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9627ms | Price: 79317.97 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8971ms | Price: 79380.00 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9254ms | Price: 79414.65 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7715ms | Price: 79330.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7026ms | Price: 79300.00 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7140ms | Price: 79304.86 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7866ms | Price: 79260.00 | TTI: 0.39 | MC: 50 paths
+  Loop 10...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7318ms | Price: 79268.10 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7215ms | Price: 79298.50 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7257ms | Price: 79300.10 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8599ms | Price: 79311.20 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7059ms | Price: 79289.80 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7112ms | Price: 79255.72 | TTI: 0.42 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7065ms | Price: 79262.80 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8143ms | Price: 79226.39 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9279ms | Price: 79213.45 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6942ms | Price: 79251.99 | TTI: 0.34 | MC: 50 paths
+  Loop 20...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6888ms | Price: 79271.28 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7272ms | Price: 79251.99 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6921ms | Price: 79220.60 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6918ms | Price: 79240.26 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6910ms | Price: 79300.48 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7035ms | Price: 79299.51 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6976ms | Price: 79319.99 | TTI: 0.31 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6842ms | Price: 79337.99 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6989ms | Price: 79295.04 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6882ms | Price: 79297.39 | TTI: 0.34 | MC: 50 paths
+  Loop 30...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6897ms | Price: 79320.18 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7154ms | Price: 79300.00 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6957ms | Price: 79280.00 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7048ms | Price: 79261.07 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6865ms | Price: 79250.55 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6610ms | Price: 79252.70 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6928ms | Price: 79261.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9602ms | Price: 79252.00 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7515ms | Price: 79238.16 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7082ms | Price: 79250.46 | TTI: 0.36 | MC: 50 paths
+  Loop 40...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7353ms | Price: 79208.34 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6896ms | Price: 79200.00 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6977ms | Price: 79200.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6770ms | Price: 79207.43 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6757ms | Price: 79200.00 | TTI: 0.42 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8342ms | Price: 79200.00 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7125ms | Price: 79208.64 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7120ms | Price: 79221.25 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7355ms | Price: 79236.69 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7218ms | Price: 79220.23 | TTI: 0.37 | MC: 50 paths
+  Loop 50...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6971ms | Price: 79207.93 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6803ms | Price: 79200.00 | TTI: 0.44 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7215ms | Price: 79136.61 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6940ms | Price: 79136.42 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6795ms | Price: 79126.97 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 9481ms | Price: 79043.23 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7849ms | Price: 79022.03 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8561ms | Price: 79067.12 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9545ms | Price: 79040.99 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 22595ms | Price: 78986.00 | TTI: 0.38 | MC: 50 paths
+  Loop 60...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7725ms | Price: 78996.87 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7063ms | Price: 78984.18 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6892ms | Price: 78981.02 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7069ms | Price: 79023.20 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7042ms | Price: 78986.00 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6924ms | Price: 79010.99 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7067ms | Price: 79011.29 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7416ms | Price: 78994.22 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6967ms | Price: 79010.16 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6755ms | Price: 79002.32 | TTI: 0.36 | MC: 50 paths
+  Loop 70...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7151ms | Price: 79000.48 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6893ms | Price: 79000.48 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7080ms | Price: 79008.09 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8979ms | Price: 78994.24 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8696ms | Price: 78980.19 | TTI: 0.31 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6891ms | Price: 78985.89 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6965ms | Price: 79019.99 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6846ms | Price: 79075.81 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6853ms | Price: 79049.40 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 11338ms | Price: 79095.68 | TTI: 0.38 | MC: 50 paths
+  Loop 80...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8168ms | Price: 79137.52 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7687ms | Price: 79071.58 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8979ms | Price: 79056.89 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7341ms | Price: 79056.38 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6900ms | Price: 79091.49 | TTI: 0.42 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6989ms | Price: 79088.19 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6940ms | Price: 79091.81 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7099ms | Price: 79071.94 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9415ms | Price: 79061.07 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7408ms | Price: 79059.19 | TTI: 0.39 | MC: 50 paths
+  Loop 90...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8052ms | Price: 79064.03 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7161ms | Price: 79105.99 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6950ms | Price: 79087.82 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8795ms | Price: 79108.49 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6973ms | Price: 79131.59 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8418ms | Price: 79087.57 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7446ms | Price: 79103.07 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6793ms | Price: 79142.03 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7001ms | Price: 79120.42 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6881ms | Price: 79138.16 | TTI: 0.37 | MC: 50 paths
+  Loop 100...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 11218ms | Price: 79118.69 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9676ms | Price: 79080.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7648ms | Price: 79093.68 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7136ms | Price: 79108.56 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7070ms | Price: 79089.36 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6926ms | Price: 79089.08 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7559ms | Price: 79139.99 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7566ms | Price: 79104.59 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7125ms | Price: 79154.89 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7138ms | Price: 79181.64 | TTI: 0.37 | MC: 50 paths
+  Loop 110...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6894ms | Price: 79199.61 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7663ms | Price: 79169.57 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7047ms | Price: 79143.48 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7840ms | Price: 79107.25 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9816ms | Price: 79137.76 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 28219ms | Price: 79129.84 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 24422ms | Price: 79040.00 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 17821ms | Price: 79030.00 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8782ms | Price: 79000.00 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 14189ms | Price: 79004.68 | TTI: 0.41 | MC: 50 paths
+  Loop 120...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 13204ms | Price: 79004.33 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8033ms | Price: 79079.99 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6900ms | Price: 79110.86 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6840ms | Price: 79090.39 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6904ms | Price: 79080.00 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7036ms | Price: 79066.00 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7677ms | Price: 79050.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7549ms | Price: 79050.00 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6973ms | Price: 79050.00 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7341ms | Price: 79050.01 | TTI: 0.35 | MC: 50 paths
+  Loop 130...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7281ms | Price: 79035.01 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6948ms | Price: 79000.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6968ms | Price: 78990.00 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6970ms | Price: 78990.00 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6991ms | Price: 79000.99 | TTI: 0.42 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7157ms | Price: 79001.51 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6790ms | Price: 78985.52 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7618ms | Price: 79047.43 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7339ms | Price: 79062.14 | TTI: 0.30 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6677ms | Price: 79041.71 | TTI: 0.33 | MC: 50 paths
+  Loop 140...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6780ms | Price: 79033.37 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7197ms | Price: 78988.25 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7105ms | Price: 78997.09 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7009ms | Price: 78951.56 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6961ms | Price: 78932.47 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7295ms | Price: 78890.00 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7219ms | Price: 78899.50 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7197ms | Price: 78899.99 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6867ms | Price: 78866.00 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7033ms | Price: 78877.69 | TTI: 0.38 | MC: 50 paths
+  Loop 150...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6982ms | Price: 78912.89 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7092ms | Price: 78910.79 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6754ms | Price: 78864.21 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7054ms | Price: 78864.11 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6897ms | Price: 78860.75 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6883ms | Price: 78873.17 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7129ms | Price: 78892.08 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7279ms | Price: 78879.19 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8163ms | Price: 78872.98 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7724ms | Price: 78859.08 | TTI: 0.38 | MC: 50 paths
+  Loop 160...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8590ms | Price: 78844.61 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6980ms | Price: 78847.39 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7061ms | Price: 78855.24 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9243ms | Price: 78844.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7752ms | Price: 78848.90 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9994ms | Price: 78855.23 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7872ms | Price: 78800.00 | TTI: 0.31 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7728ms | Price: 78808.35 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9555ms | Price: 78790.72 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9186ms | Price: 78787.69 | TTI: 0.36 | MC: 50 paths
+  Loop 170...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8770ms | Price: 78779.82 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7322ms | Price: 78790.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7614ms | Price: 78793.61 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6974ms | Price: 78786.98 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6752ms | Price: 78784.94 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6788ms | Price: 78755.00 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7700ms | Price: 78784.63 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6891ms | Price: 78806.23 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7111ms | Price: 78816.02 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8411ms | Price: 78812.85 | TTI: 0.42 | MC: 50 paths
+  Loop 180...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7295ms | Price: 78765.59 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6958ms | Price: 78789.93 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7826ms | Price: 78776.87 | TTI: 0.30 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 11039ms | Price: 78775.76 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 13790ms | Price: 78809.96 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 17247ms | Price: 78807.14 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 10110ms | Price: 78824.41 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7448ms | Price: 78847.05 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7434ms | Price: 78860.59 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7409ms | Price: 78877.99 | TTI: 0.32 | MC: 50 paths
+  Loop 190...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7605ms | Price: 78863.86 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7214ms | Price: 78849.43 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7125ms | Price: 78840.79 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7266ms | Price: 78823.47 | TTI: 0.30 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7545ms | Price: 78826.76 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7432ms | Price: 78820.07 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6959ms | Price: 78829.99 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7167ms | Price: 78829.99 | TTI: 0.43 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7026ms | Price: 78847.82 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7100ms | Price: 78831.25 | TTI: 0.36 | MC: 50 paths
+  Loop 200...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7294ms | Price: 78830.81 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6926ms | Price: 78829.98 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6859ms | Price: 78834.35 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7301ms | Price: 78815.30 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7746ms | Price: 78827.53 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7271ms | Price: 78777.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7355ms | Price: 78766.26 | TTI: 0.30 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7218ms | Price: 78755.53 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7369ms | Price: 78750.00 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6855ms | Price: 78756.50 | TTI: 0.35 | MC: 50 paths
+  Loop 210...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6789ms | Price: 78750.45 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6839ms | Price: 78777.00 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6859ms | Price: 78750.46 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6722ms | Price: 78754.66 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7547ms | Price: 78789.49 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7024ms | Price: 78839.99 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7181ms | Price: 78843.41 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7167ms | Price: 78822.94 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7391ms | Price: 78829.90 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7119ms | Price: 78848.51 | TTI: 0.38 | MC: 50 paths
+  Loop 220...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7146ms | Price: 78879.99 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7122ms | Price: 78861.36 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7208ms | Price: 78853.61 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6864ms | Price: 78862.48 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7762ms | Price: 78846.97 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7533ms | Price: 78861.73 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6956ms | Price: 78924.57 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6875ms | Price: 78954.48 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7118ms | Price: 78948.34 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7133ms | Price: 78967.97 | TTI: 0.37 | MC: 50 paths
+  Loop 230...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7486ms | Price: 78969.99 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6804ms | Price: 78957.02 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6786ms | Price: 78961.03 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6679ms | Price: 78983.15 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6915ms | Price: 78962.10 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7229ms | Price: 78948.10 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7325ms | Price: 78958.09 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7175ms | Price: 78951.63 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8095ms | Price: 78940.54 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 15894ms | Price: 78947.75 | TTI: 0.39 | MC: 50 paths
+  Loop 240...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 17955ms | Price: 78958.06 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 23367ms | Price: 78965.79 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 11764ms | Price: 78951.52 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 10306ms | Price: 78944.22 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9980ms | Price: 78941.15 | TTI: 0.31 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 10288ms | Price: 79000.75 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 16686ms | Price: 78992.04 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 30600ms | Price: 79019.00 | TTI: 0.29 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 15572ms | Price: 79045.59 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8508ms | Price: 79051.50 | TTI: 0.38 | MC: 50 paths
+  Loop 250...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9876ms | Price: 79110.25 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7426ms | Price: 79060.35 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7194ms | Price: 79060.00 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7060ms | Price: 79068.91 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 6833ms | Price: 79050.11 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7031ms | Price: 79005.91 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8486ms | Price: 79007.76 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7775ms | Price: 78979.20 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 24169ms | Price: 78969.49 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 16217ms | Price: 78988.89 | TTI: 0.42 | MC: 50 paths
+  Loop 260...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 21717ms | Price: 79020.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 21545ms | Price: 79020.01 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 25674ms | Price: 78974.25 | TTI: 0.31 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 25740ms | Price: 79012.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 14242ms | Price: 79019.83 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 10438ms | Price: 79007.52 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 8775ms | Price: 79009.59 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9553ms | Price: 79016.53 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 13611ms | Price: 79032.50 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 25140ms | Price: 79000.00 | TTI: 0.41 | MC: 50 paths
+  Loop 270...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 12487ms | Price: 78997.53 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8903ms | Price: 78999.49 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8028ms | Price: 78997.52 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8039ms | Price: 79020.82 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8581ms | Price: 79031.40 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7588ms | Price: 79028.46 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 7818ms | Price: 79039.94 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 8160ms | Price: 79039.94 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 12897ms | Price: 79028.46 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 30214ms | Price: 78997.53 | TTI: 0.40 | MC: 50 paths
+  Loop 280...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 31299ms | Price: 78882.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 16786ms | Price: 78894.62 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 16049ms | Price: 78939.65 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 33101ms | Price: 78906.20 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 53452ms | Price: 78899.08 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 39161ms | Price: 78845.11 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 23364ms | Price: 78789.72 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 17330ms | Price: 78857.11 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 13939ms | Price: 78814.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 14800ms | Price: 78809.03 | TTI: 0.39 | MC: 50 paths
+  Loop 290...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 16989ms | Price: 78800.00 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 17021ms | Price: 78800.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 12002ms | Price: 78815.30 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 9496ms | Price: 78815.29 | TTI: 0.31 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 13046ms | Price: 78750.51 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 17472ms | Price: 78714.79 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 24712ms | Price: 78770.97 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 66115ms | Price: 78792.95 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 67881ms | Price: 78694.17 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 70810ms | Price: 78635.98 | TTI: 0.37 | MC: 50 paths
+  Loop 300...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 70603ms | Price: 78643.52 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 85775ms | Price: 78695.58 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 101922ms | Price: 78537.12 | TTI: 0.33 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 118107ms | Price: 78639.99 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 112725ms | Price: 78696.13 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 133792ms | Price: 78469.79 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 127877ms | Price: 78445.00 | TTI: 0.35 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 99945ms | Price: 78415.67 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 127349ms | Price: 78539.96 | TTI: 0.34 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 139154ms | Price: 78605.80 | TTI: 0.40 | MC: 50 paths
+  Loop 310...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 99769ms | Price: 78618.00 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 71683ms | Price: 78789.87 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 58097ms | Price: 78831.97 | TTI: 0.32 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 69466ms | Price: 78789.87 | TTI: 0.38 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 101117ms | Price: 78728.22 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 92258ms | Price: 78606.65 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 117130ms | Price: 78672.00 | TTI: 0.39 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 119706ms | Price: 78606.26 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 92277ms | Price: 78520.00 | TTI: 0.36 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 84425ms | Price: 78519.59 | TTI: 0.30 | MC: 50 paths
+  Loop 320...
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 79024ms | Price: 78404.95 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 66966ms | Price: 78375.00 | TTI: 0.37 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+ Marksman Pulse Broadcasted | Total: 42229ms | Price: 78345.32 | TTI: 0.40 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)
+BROADCAST ERROR (marksman_pulse): HTTPConnectionPool(host='localhost', port=3000): Read timed out. (read timeout=0.1)
+ Marksman Pulse Broadcasted | Total: 47230ms | Price: 78350.28 | TTI: 0.41 | MC: 50 paths
+EXCHANGE FETCH FAILED: hyperliquid POST https://api.hyperliquid.xyz/info 500 Internal Server Error null
+  -> Using Binance Fallback (Live Price Sync)

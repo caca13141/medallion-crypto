@@ -88,7 +88,7 @@ class SparseMoE(nn.Module):
                 # We need to add (weight * output) to the final output
                 final_output.index_add_(0, token_indices, weights * expert_output)
                 
-        return final_output.view(b, s, d)
+        return final_output.view(b, s, d), probs.view(b, s, -1)
 
 class MoETransformerBlock(nn.Module):
     """Custom Transformer Block with MoE instead of FFN."""
@@ -101,12 +101,14 @@ class MoETransformerBlock(nn.Module):
 
     def forward(self, x):
         # Attention
-        x = x + self.attn(self.ln1(x), self.ln1(x), self.ln1(x))[0]
+        x_attn, _ = self.attn(self.ln1(x), self.ln1(x), self.ln1(x))
+        x = x + x_attn
         # MoE
-        x = x + self.moe(self.ln2(x))
-        return x
+        moe_out, weights = self.moe(self.ln2(x))
+        x = x + moe_out
+        return x, weights
 
-class TopoTransformerGPT(nn.Module):
+class LatentAlphaTransformer(nn.Module):
     """
     V10 Exascale MoE Transformer.
     d_model=2048, nhead=32, num_layers=48, experts=8.
@@ -130,11 +132,11 @@ class TopoTransformerGPT(nn.Module):
         # 1. Image Encoder (Exascale-ready)
         self.encoder = nn.Sequential(
             nn.Conv2d(1, 128, kernel_size=3, padding=1),
-            nn.LayerNorm([128, 32, 32]),
+            nn.GroupNorm(8, 128),
             nn.GELU(),
             nn.MaxPool2d(2), # 16x16
             nn.Conv2d(128, 256, kernel_size=3, padding=1),
-            nn.LayerNorm([256, 16, 16]),
+            nn.GroupNorm(8, 256),
             nn.GELU(),
             nn.MaxPool2d(2), # 8x8
             nn.Conv2d(256, 512, kernel_size=3, padding=1),
@@ -144,7 +146,7 @@ class TopoTransformerGPT(nn.Module):
         
         self.pos_embedding = nn.Parameter(torch.randn(1, seq_len, d_model))
         
-        # 2. MoE Stack (The 13.6B Core)
+        # 2. MoE Stack
         self.layers = nn.ModuleList([
             MoETransformerBlock(d_model, nhead, num_experts=num_experts, dropout=dropout)
             for _ in range(num_layers)
@@ -152,21 +154,21 @@ class TopoTransformerGPT(nn.Module):
         
         self.ln_out = nn.LayerNorm(d_model)
         
-        # 3. Heads
+        # 3. Heads (Matched to bootstrap 1024)
         self.scalar_head = nn.Sequential(
-            nn.Linear(d_model, 2048),
+            nn.Linear(d_model, 1024),
             nn.GELU(),
-            nn.Linear(2048, 2) # [Loop Score, TTI]
+            nn.Linear(1024, 2) # [Loop Score, TTI]
         )
         
         self.vector_head = nn.Sequential(
-            nn.Linear(d_model, 2048),
+            nn.Linear(d_model, 1024),
             nn.GELU(),
-            nn.Linear(2048, 8)
+            nn.Linear(1024, 8)
         )
         
         self.image_head = nn.Sequential(
-            nn.Linear(d_model, 512 * 8 * 8),
+            nn.Linear(d_model, 32768), # Matched to checkpoint image_head.0.weight shape
             nn.GELU(),
             nn.Unflatten(1, (512, 8, 8)),
             nn.ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1),
@@ -177,40 +179,34 @@ class TopoTransformerGPT(nn.Module):
             nn.Sigmoid()
         )
         
-    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         b, s, c, h, w = x.shape
         x_flat = x.view(b * s, c, h, w)
         embeddings = self.encoder(x_flat)
         embeddings = embeddings.view(b, s, self.d_model)
         embeddings = embeddings + self.pos_embedding[:, :s, :]
         
-        # Process through MoE layers with Activation Checkpointing
-        # Mandatory for 13.6B param stability on local hardware
+        all_weights = []
         for layer in self.layers:
-            if self.use_checkpointing and self.training:
-                from torch.utils.checkpoint import checkpoint
-                embeddings = checkpoint(layer, embeddings, use_reentrant=False)
-            else:
-                embeddings = layer(embeddings)
+            embeddings, weights = layer(embeddings)
+            all_weights.append(weights)
             
         last_state = self.ln_out(embeddings[:, -1, :])
+        activation_weights = all_weights[-1][:, -1, :] 
         
-        return self.scalar_head(last_state), self.vector_head(last_state), self.image_head(last_state)
+        return self.scalar_head(last_state), self.vector_head(last_state), self.image_head(last_state), activation_weights
 
-def create_model(exascale=False):
-    """Factory function for production model. Defaults to Stability Mode (1.1B)."""
-    # Force stability mode for now to prevent OOM
-    return TopoTransformerGPT(d_model=512, nhead=8, num_layers=12, num_experts=8)
+def create_model(capacity_mode='stability'):
+    """Factory function for production model initialization."""
+    return LatentAlphaTransformer(d_model=512, nhead=8, num_layers=12, num_experts=8)
 
 if __name__ == "__main__":
-    # Test Instantiation (Stability Mode)
-    print("Initializing Stability Mode Model (1.1B)...")
+    print("[INFO] Initializing Latent Alpha Transformer...")
     model = create_model()
     param_count = sum(p.numel() for p in model.parameters())
-    print(f"Model Parameters: {param_count/1e9:.2f}B")
+    print(f"[INFO] Model Parameters: {param_count/1e9:.2f}B")
     
-    # Dummy input
     x = torch.randn(1, 2, 1, 32, 32)
     with torch.no_grad():
-        s, v, img = model(x)
-    print(f"Output Shapes: Scalars {s.shape}, Vectors {v.shape}, Image {img.shape}")
+        s, v, img, act = model(x)
+    print(f"[INFO] Output Projection Success. Activation Shape: {act.shape}")

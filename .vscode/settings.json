@@ -1,0 +1,8 @@
+{
+    "git.ignoreLimitWarning": true,
+    "ocaml.sandbox": {
+        "kind": "opam",
+        "switch": "/Users/raphaelmaksoud/ocaml"
+    },
+    "cmake.sourceDirectory": "/Users/raphaelmaksoud/crypto toppo/src/pricing_engine"
+}

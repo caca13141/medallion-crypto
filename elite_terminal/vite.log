@@ -1,0 +1,12 @@
+
+> elite_terminal@0.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 756 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+5:49:51 PM [vite] hmr update /src/App.tsx, /src/index.css
+5:50:13 PM [vite] hmr update /src/App.tsx, /src/index.css

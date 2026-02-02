@@ -1,0 +1,18 @@
+
+> elite_terminal@0.0.0 dev
+> vite --host
+
+
+  VITE v5.4.21  ready in 246 ms
+
+  ➜  Local:   http://localhost:1420/
+  ➜  Network: http://192.168.2.78:1420/
+7:23:05 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:26:31 PM [vite] hmr update /src/components/OrderBookHeatmap.tsx, /src/index.css
+7:28:24 PM [vite] hmr update /src/components/OrderBookHeatmap.tsx, /src/index.css
+7:29:23 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:29:23 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:31:15 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:31:18 PM [vite] hmr update /src/components/OrderBookHeatmap.tsx, /src/index.css
+7:31:43 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:31:43 PM [vite] hmr update /src/components/OrderBookHeatmap.tsx, /src/index.css

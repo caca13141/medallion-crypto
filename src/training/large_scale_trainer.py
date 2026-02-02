@@ -31,10 +31,9 @@ class ExascaleTrainer:
             dist.init_process_group("gloo", rank=rank, world_size=world_size)
             torch.cuda.set_device(rank) if torch.cuda.is_available() else None
             
-            # Setup Model (13.6B Exascale - Initialize on Meta Device)
-            # This prevents 27GB+ RAM usage during construction
+            # Setup Model (Exascale - Initialize on Meta Device)
             with torch.device("meta"):
-                model = TopoTransformerGPT(d_model=512, nhead=8, num_layers=12, num_experts=8)
+                model = TopoTransformerGPT(d_model=256, nhead=8, num_layers=4, num_experts=8)
             
             # FSDP Wrapping with Sharding Strategy
             from torch.distributed.fsdp import ShardingStrategy
@@ -54,10 +53,10 @@ class ExascaleTrainer:
                                ),
                                sync_module_states=True) # Essential for meta-device sharding
         else:
-            # Local Mode (Stability Mode 1.1B)
-            print("  -> Initializing Stability Mode Stack (1.1B Params)...", flush=True)
+            # Local Mode (Resumption Mode)
+            print("  -> Initializing Resumption Mode Stack (256 Dim, 4 Layers)...", flush=True)
             try:
-                self.model = TopoTransformerGPT(d_model=512, nhead=8, num_layers=12, num_experts=8)
+                self.model = TopoTransformerGPT(d_model=256, nhead=8, num_layers=4, num_experts=8)
                 if torch.cuda.is_available():
                     self.model = self.model.cuda()
                 elif torch.backends.mps.is_available():
@@ -148,11 +147,21 @@ def setup(rank, world_size, mode="pre"):
     if mode == "pre":
         trainer.run_training("src/data/topology_dataset/synthetic", epochs=1, is_fine_tuning=False)
     else:
-        # Load pre-trained weights if available
-        pre_trained = "src/data/models/exascale_bootstrap.pt"
-        if os.path.exists(pre_trained):
-            print(f"  -> Loading Pre-trained Weights from {pre_trained}")
-            trainer.model.load_state_dict(torch.load(pre_trained, map_location="cpu", weights_only=False))
+        # Load latest checkpoint (prefer fine-tuned over bootstrap)
+        latest_checkpoint = None
+        checkpoint_dir = Path("models")
+        if checkpoint_dir.exists():
+            fine_checkpoints = sorted(checkpoint_dir.glob("exascale_13b_fine_ep*.pt"), 
+                                     key=lambda x: x.stat().st_mtime, reverse=True)
+            if fine_checkpoints:
+                latest_checkpoint = str(fine_checkpoints[0])
+        
+        if not latest_checkpoint:
+            latest_checkpoint = "src/data/models/exascale_bootstrap.pt"
+        
+        if os.path.exists(latest_checkpoint):
+            print(f"  -> Loading Weights from {latest_checkpoint}")
+            trainer.model.load_state_dict(torch.load(latest_checkpoint, map_location="cpu", weights_only=False))
         
         trainer.run_training("src/data/topology_dataset/real", epochs=3, is_fine_tuning=True)
 

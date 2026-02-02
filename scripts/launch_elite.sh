@@ -13,7 +13,7 @@ lsof -ti :1420,3000 | xargs kill -9 2>/dev/null
 
 # 2. Environment Setup
 export RUST_LOG=info
-export LIGHT_MODE=true # Force light mode for instant start
+export LIGHT_MODE=false # Re-enable Intelligence (Now 1.1B Safe)
 
 # 3. Start Rust Backend
 echo "-> Starting Rust Backend (Port 3000)..."

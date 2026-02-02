@@ -37,19 +37,22 @@ class TopologySignature:
     bear_loops: int = 0            # Number of loops in "Below Mean" regime
     bifiltration_score: float = 0.0 # Volume-weighted persistence score
 
-class ProductionTopologyEngine:
+class PersistenceEngine:
     """
     Advanced Topological Data Analysis Engine.
     Integrates GUDHI (Bifiltration) and Ripser++ (Fast VR).
+    Maintains compatibility with legacy TopologyIntegrator.
     """
     
     def __init__(self, 
                  resolution: int = 32, 
                  landscape_layers: int = 5,
-                 max_edge_length: float = 5.0):
+                 max_edge_length: float = 5.0,
+                 max_dimension: int = 1):
         self.resolution = resolution
         self.landscape_layers = landscape_layers
         self.max_edge_length = max_edge_length
+        self.max_dimension = max_dimension
         
         # Initialize Persistence Imager with default settings
         self.imager = PersistenceImager()
@@ -210,18 +213,68 @@ class ProductionTopologyEngine:
         bull_loops = np.sum(point_cloud[:, -1] > mean_price) # Simplified proxies
         bear_loops = np.sum(point_cloud[:, -1] <= mean_price)
 
-        return TopologySignature(
-            persistence_image=p_image,
-            landscapes=land,
-            betti_curves=np.zeros(10),
-            loop_score=loop_score,
-            tti=tti,
-            wasserstein_amp=wass_amp,
-            h1_summary=h1_summary,
-            bull_loops=int(bull_loops),
-            bear_loops=int(bear_loops),
-            bifiltration_score=bifiltration_score
-        )
+        return sig
+
+    def _landmark_selection(self, points, n_landmarks=150):
+        """Simple furthest point sampling or random selection"""
+        if len(points) <= n_landmarks:
+            return points
+        indices = np.random.choice(len(points), n_landmarks, replace=False)
+        return points[indices]
+
+    # --- Legacy Compatibility Methods ---
+    
+    def compute_point_cloud(self, prices, volumes=None, volatilities=None):
+        """Compute 3D Takens Embedding for legacy integrator"""
+        n = len(prices)
+        cloud = np.zeros((n, 3))
+        # Dim 1: Z-score returns
+        returns = np.diff(np.log(prices + 1e-8), prepend=np.log(prices[0] + 1e-8))
+        cloud[:, 0] = (returns - np.mean(returns)) / (np.std(returns) + 1e-8)
+        # Dim 2: Volume proxy
+        if volumes is not None:
+            cloud[:, 1] = (volumes - np.mean(volumes)) / (np.std(volumes) + 1e-8)
+        # Dim 3: Volatility proxy
+        if volatilities is not None:
+            cloud[:, 2] = (volatilities - np.mean(volatilities)) / (np.std(volatilities) + 1e-8)
+        return cloud
+
+    def compute_persistence(self, point_cloud):
+        """Legacy wrapper for ripser"""
+        if len(point_cloud) > 150:
+            point_cloud = self._landmark_selection(point_cloud, 150)
+        return ripser(point_cloud, maxdim=1)['dgms']
+
+    def loop_score(self, diagrams):
+        """Legacy wrapper for H1 lifetime"""
+        if len(diagrams) < 2 or len(diagrams[1]) == 0:
+            return 0.0
+        h1 = diagrams[1]
+        lifetimes = h1[h1[:,1] != np.inf][:, 1] - h1[h1[:,1] != np.inf][:, 0]
+        return np.max(lifetimes) if len(lifetimes) > 0 else 0.0
+
+    def topological_turbulence_index(self, diagrams):
+        """Legacy wrapper for H0 entropy"""
+        h0 = diagrams[0]
+        lifetimes = h0[h0[:, 1] != np.inf][:, 1] - h0[h0[:, 1] != np.inf][:, 0]
+        if len(lifetimes) == 0: return 0.0
+        probs = lifetimes / np.sum(lifetimes)
+        return -np.sum(probs * np.log(probs + 1e-10))
+
+    def persistence_image(self, diagram, resolution=32):
+        """Legacy wrapper for persistence imager"""
+        if len(diagram) == 0:
+            return np.zeros((resolution, resolution))
+        # Ensure resolution matches imager or resize
+        clean_diag = diagram[diagram[:, 1] != np.inf]
+        if len(clean_diag) == 0:
+            return np.zeros((resolution, resolution))
+        img = self.imager.fit_transform([clean_diag])[0]
+        # Resize if necessary
+        if img.shape[0] != resolution:
+            from scipy.ndimage import zoom
+            img = zoom(img, resolution / img.shape[0])
+        return img
 
 # Example Usage
 if __name__ == "__main__":

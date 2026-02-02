@@ -1,0 +1,5 @@
+(executable
+ (public_name strategy_kernel)
+ (package strategy_kernel)
+ (name main)
+ (libraries strategy_lib))

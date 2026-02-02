@@ -8,7 +8,7 @@ from src.core.logger import setup_logger
 from src.core.monitor import Monitor
 from src.data.feed import HyperliquidFeed
 from src.alpha.topo_signal_engine import TopoSignalEngine
-from src.risk.nuclear_controls import RiskControls
+from src.risk.risk_controls import RiskControls
 from src.execution.router import Router
 
 logger = setup_logger("TOPO_OMEGA_ENGINE")
@@ -21,10 +21,10 @@ class TopoOmegaEngine:
         # Data feed
         self.feed = HyperliquidFeed(Config.API_URL)
         
-        # Nuclear signal engine
+        # Signal engine
         self.signal_engine = TopoSignalEngine(
             enable_transformer=True,
-            enable_ppo=False  # Enable after training
+            enable_ppo=False  
         )
         
         # Risk controls
@@ -53,10 +53,10 @@ class TopoOmegaEngine:
             
         self.monitor = Monitor()
         
-        logger.info("TOPOOMEGA v2.0 ENGINE INITIALIZED")
+        logger.info("TOPOOMEGA v2.0 PRODUCTION ENGINE INITIALIZED")
         
     def run(self):
-        logger.info("STARTING WARFARE LOOP...")
+        logger.info("STARTING PRODUCTION LOOP...")
         
         # Reset daily equity at start
         state = self.feed.get_user_state(Config.WALLET_ADDRESS)

@@ -4,6 +4,12 @@
 
 @layer base {
   :root {
+    /* HIGH-DPI SHARPNESS TOKENS */
+    --font-rendering: optimizeLegibility;
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+    --sharp-border: 1px solid #E5E5E5;
+
     --background: #FFFFFF;
     --foreground: #111111;
     --card: #FFFFFF;
@@ -30,7 +36,12 @@ body {
   color: var(--foreground);
   font-family: 'Inter', -apple-system, system-ui, sans-serif;
   font-size: 13px;
+  /* HD Sharpness Overrides */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'cv05', 'cv08', 'ss01';
+  /* Inter features for clarity */
 }
 
 /* Scrollbar: Professional Minimal */

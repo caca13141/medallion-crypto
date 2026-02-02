@@ -1,0 +1,26 @@
+opam-version: "2.0"
+name: "strategy_kernel"
+version: "0.1"
+synopsis: "HFT Strategy Kernel"
+description: "OCaml Strategy Logic for Elite Terminal"
+maintainer: "Quant"
+authors: ["Quant"]
+license: "MIT"
+depends: [
+  "dune" {>= "3.0"}
+  "ocaml" {>= "5.0"}
+]
+build: [
+  ["dune" "subst"] {pinned}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]

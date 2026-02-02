@@ -16,6 +16,8 @@ log = "0.4"
 env_logger = "0.11"
 pyo3 = { version = "0.20", features = ["extension-module"] }
 dashmap = "5.5" # Concurrent hashmap for order book
+rustfft = "6.2"
+shared_memory = "0.12"
 
 [lib]
 name = "topo_execution"

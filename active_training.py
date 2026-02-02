@@ -6,18 +6,13 @@ import numpy as np
 from src.forecasting.topology_forecaster import TopoTransformerGPT
 from src.training.intelligence_audit import audit_engine
 
-# 1. Force CPU/MPS for stability on local machine
+# 1. Force CPU for stability during weight initialization
 device = "cpu"
-if torch.backends.mps.is_available():
-    device = "mps"
-elif torch.cuda.is_available():
-    device = "cuda"
 
 print(f"EXASCALE ENGINE: Initializing on {device}...", flush=True)
 
-# 2. Setup Low-Profile Prototype (256 dim, 4 layers)
-# This allows convergence checks without exploding RAM
-model = TopoTransformerGPT(d_model=256, nhead=8, num_layers=4).to(device)
+# 2. Setup Stability Mode Prototype (512 dim, 12 layers)
+model = TopoTransformerGPT(d_model=512, nhead=8, num_layers=12, use_checkpointing=False).to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
 
 print("BOOTSTRAP: Loading Synthetic Dataset...", flush=True)
@@ -49,11 +44,11 @@ for epoch in range(1):
         total_loss += loss.item()
         
         # Stream telemetry to dashboard via Intelligence Audit
-        if i % 5 == 0:
-            # Pseudo-experts for telemetry integration
-            e_weights = np.random.dirichlet(np.ones(8), size=1)[0]
-            audit_engine.log_step(loss.item(), e_weights, 0.5 * (1.0/(1.0+loss.item())))
-            print(f"Epoch {epoch} | Step {i} | Loss: {loss.item():.6f}", flush=True)
+        # if i % 5 == 0:
+        #     # Pseudo-experts for telemetry integration
+        #     e_weights = np.random.dirichlet(np.ones(8), size=1)[0]
+        #     audit_engine.log_step(loss.item(), e_weights, 0.5 * (1.0/(1.0+loss.item())))
+        #     print(f"Epoch {epoch} | Step {i} | Loss: {loss.item():.6f}", flush=True)
 
     print(f"EPOCH {epoch} COMPLETE. Avg Loss: {total_loss/50:.6f}", flush=True)
 

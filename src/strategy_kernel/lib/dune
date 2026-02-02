@@ -1,0 +1,4 @@
+(library
+ (name strategy_lib)
+ (libraries unix)
+ (public_name strategy_lib))

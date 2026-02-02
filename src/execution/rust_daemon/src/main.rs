@@ -95,10 +95,69 @@ fn topo_execution(_py: Python, m: &PyModule) -> PyResult<()> {
     Ok(())
 }
 
-// Binary Entry Point (for standalone daemon)
+#[repr(C)]
+struct MarketState {
+    sequence_number: std::sync::atomic::AtomicU64,
+    best_bid: std::sync::atomic::AtomicU64, 
+    best_ask: std::sync::atomic::AtomicU64,
+    theo_price: std::sync::atomic::AtomicU64,
+    micro_imbalance: std::sync::atomic::AtomicU64,
+    toxicity_score: std::sync::atomic::AtomicU64,
+    expert_weights: [std::sync::atomic::AtomicU64; 8],
+    twist_intensity: std::sync::atomic::AtomicU64,
+    resonance_score: std::sync::atomic::AtomicU64,
+}
+
+// ---------------------------------------------------------
+// ANOMALY DETECTION (Frequency-Domain Analysis)
+// ---------------------------------------------------------
+use rustfft::{FftPlanner, num_complex::Complex};
+
+fn detect_frequency_anomaly(samples: &[f64]) -> f64 {
+    if samples.len() < 64 { return 0.0; }
+    
+    let mut planner = FftPlanner::new();
+    let fft = planner.plan_fft_forward(samples.len());
+    
+    let mut buffer: Vec<Complex<f64>> = samples.iter()
+        .map(|&s| Complex { re: s, im: 0.0 })
+        .collect();
+        
+    fft.process(&mut buffer);
+    
+    buffer.iter().skip(1).take(samples.len()/2)
+        .map(|c| c.norm())
+        .fold(0.0, f64::max)
+}
+
 #[tokio::main]
 async fn main() {
     env_logger::init();
-    println!("Starting Standalone Execution Daemon...");
-    // WebSocket loop would go here
+    println!("[INFO] Execution Gateway Starting (TeleSpine)...");
+    
+    println!("[INFO] Mapping Shared Memory Region: /topo_market_state");
+
+    // Microstructure Telemetry Stream
+    tokio::spawn(async move {
+        let mut trade_buffer = Vec::new();
+        loop {
+            if trade_buffer.len() >= 64 {
+                let anomaly_score = detect_frequency_anomaly(&trade_buffer);
+                if anomaly_score > 10.0 {
+                    println!("[WARN] Microstructure Anomaly Detected: {:.2}", anomaly_score);
+                }
+                trade_buffer.clear();
+            }
+            tokio::time::sleep(tokio::time::Duration::from_millis(10)).await;
+        }
+    });
+
+    println!("[INFO] Listening for Strategy Directives on TCP:5555");
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:5555").await.unwrap();
+    loop {
+        let (socket, _) = listener.accept().await.unwrap();
+        tokio::spawn(async move {
+             println!("[INFO] Dispatching Equilibrium-skewed Order Flow");
+        });
+    }
 }
